@@ -5,9 +5,11 @@ const sqlite3 = require('sqlite3').verbose()
 const bodyParser = require('body-parser')
 const { request } = require('express')
 
-const path = require('path')
-path.resolve(__dirname,'banco.sqlite')
-
+const reso = async() => {
+    db = await dbConnection
+    path.resolve(__dirname,'banco.sqlite')
+}
+reso()
 const dbConnection = sqlite.open({
     filename:'banco.sqlite',
     driver: sqlite3.Database}
