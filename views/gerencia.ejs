@@ -1,0 +1,11 @@
+<%- include('header')%>
+   
+        
+    
+<h2>Clientes</h2>
+<% clienteDb.forEach( clientes => { %>
+    <div>
+        <h3>Conta <%- clientes.id%> : <%- clientes.cliente%> - RG: <%- clientes.rg%> - CPF: <%- clientes.cpf%> Saldo R$: <%- clientes.saldo%></h3><a href="/gerente/apagarcliente/<%- clientes.id%>">Apagar</a>
+    </div>
+<% }) %>
+<%- include('footer')%>

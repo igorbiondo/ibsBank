@@ -1,0 +1,31 @@
+<%- include('header')%>
+   
+        
+        
+    <h2>Cliente: </h2>
+    <% clienteDb.forEach( clientes => { %>
+        <div>
+            <h3>Conta <%- clientes.id%> : <%- clientes.cliente%> - RG: <%- clientes.rg%> - CPF: <%- clientes.cpf%> Saldo R$: <%- clientes.saldo%></h3>
+        </div>
+        <div>
+            <h3>Depositar:</h3>
+            <form method="POST">
+                <label>Valor:</label>  
+                <input type="value" name="deposita"> <br>
+                <small>     Use ponto ao invés de virgula</small><br><br>
+
+                <button>Depositar</button>
+            </form>
+        </div>
+        <div>
+            <h3>Sacar:</h3>
+            <form method="POST">
+                <label>Valor:</label>  
+                <input type="value" name="saca"> <br>
+                <small>     Use ponto ao invés de virgula</small><br><br>
+
+                <button>Sacar</button>
+            </form>
+        </div>
+    <% }) %>
+<%- include('footer')%>

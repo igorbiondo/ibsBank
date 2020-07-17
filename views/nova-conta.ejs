@@ -1,0 +1,20 @@
+<%- include('header') %>
+    <form method="POST">
+        <label>Nome Completo:</label>  
+        <input type="text" name="nome"> <br>
+        <label>RG:</label>  
+        <input type="number" name="rg"> <br>
+        <label>CPF:</label>  
+        <input type="number" name="cpf" maxlength="11"> <br>
+        <small>Formato: 123-123-123-12</small><br>
+        <label>Telefone:</label>  
+        <input type="number" name="telefone"> <br>
+        <label>Senha:</label>  
+        <input type="password" name="senha"> <br>
+
+        <button>Enviar</button>
+    </form>
+
+
+
+<%- include('footer') %>
